@@ -4,6 +4,13 @@ backend:
     preBuild:
       commands:
         - echo "Build environment is $CODEBUILD_BUILD_IMAGE"
+        # Install and start Docker
+        - yum update -y
+        - yum install -y docker
+        - service docker start
+        - usermod -a -G docker $USER
+        # Verify Docker is working
+        - docker --version
         # - aws ecr-public get-login-password | docker login --username AWS --password-stdin public.ecr.aws
     build:
       commands:
