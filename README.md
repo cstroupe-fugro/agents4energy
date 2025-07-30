@@ -72,4 +72,4 @@ Example Table Definition:
 ![Maintenance Agent](assets/images/A4E-Maintenance-Agent.png)
 You can modify the data that is included in the Aurora Serverless v2 PostgreSQL database by altering the [INSERT SQL statements used in the DB prep Lambda function](amplify/agents/maintenance/lambda).
 
-This Lambda function can be run at any time to reset the sample data to the original deployed state.  This can be useful if you use the agent to modify or update the data to test the read-write capabilities of the text-to-SQL tool.
+This Lambda function can be run at any time to reset the sample data to the original deployed state.  This can be useful if you use the agent to modify or update the data to test the read-write capabilities of the text-to-SQL tool. Change
